@@ -21,22 +21,22 @@
 </script>
   </head>
   <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="shapesFunction(event)">
       <nav>
         <figure class="landing__img-wrapper">
-          <img src="/assets/logo.svg" class="personal-logo" alt="55" />
+          <img src="assets/logo.svg" class="personal-logo" alt="55" />
         </figure>
         <ul class="nav__link-list">
           <li class="nav__link">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              >About</a
+              class="nav__link--anchor link__hover-effect link__hover-effect--black nope" 
+              onclick="openMenu()" >About</a
             >
           </li>
           <li class="nav__link">
             <a
-              href="#"
+              href="#projects"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Projects</a
             >
@@ -45,10 +45,10 @@
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              >Contact</a
+              onclick="openMenu()" >Contact</a
             >
           </li>
-          <li class="nav__link click">
+          <li class="nav__link click" onclick="colorContrast()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -58,25 +58,29 @@
         </ul>
              
     </nav>
-      <header class="header">
+    <header class="header" >
         <div class="header__content">
             <h1 class="title">Hey
             </h1>
-                <h1 class="title title--secondary orange">I'm George</h1>
-<p class="header__para">
-   I am a student that enjoys <span class="orange">creating!</span> I love looking at my old projects to see how far I have come in just a  <span class="orange">few weeks.</span> Here is a bit more <span class="orange">about me.</span>
-</p>
-<div class="social__list">
-    <a href="#" class="social__link click"><i class="fab fa-linkedin-in"></i></a>
-    <a href="#" class="social__link click"><i class="fab fa-github"></i></a>
-    <a href="#" class="social__link click"><i class="fas fa-file-pdf"></i></a>
-</div> 
+            <h1 class="title title--secondary "><span class="orange">I'm George</span></h1>
+             
+                 <p class="header__para">
+                     I am a student that enjoys <span class="orange">creating!</span> I love looking at my old projects to see how far I have come in just a  <span class="orange">few weeks.</span> Here is a bit more <span class="orange"  onclick="openMenu()">about me.</span>
+                    </p>
+                
+            <div class="social__list">
+                <a href="#" class="social__link click"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social__link click"><i class="fab fa-github"></i></a>
+                <a href="#" class="social__link click"><i class="fas fa-file-pdf"></i></a>
+            </div> 
+            
+        </header>
 <div class="modal">
     <div class="modal__half modal__about">
         <div class="modal__info">
             <h3 class="modal__title">Here's a bit about me.</h3>
             <h4 class="modal__sub-title">New Frontend Developer</h4> 
-            <p class="modal__para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatem nisi earum hic aspernatur ex fugit consequatur,</p>
+            <p class="modal__para">I'm a 18 year old student from  <a href="https://en.wikipedia.org/wiki/Bulgaria" class="bulgaria" target="_blank"><span class="white">Bul</span><span class="green">ga</span><span class="red">ria</span></a> and my medium term goal is to become a great Frontend Developer in a few <span class="orange">months! </span>My long term goal is to become a <span class="orange">Full-Stack Developer</span> in a year.</p>
         </div>
         <div class="modal__languages">
                 <figure class="modal__language">
@@ -101,17 +105,18 @@
         <h3 class="modal__title">Let's have a chat!</h3>
     <h4 class="modal__sub-title">I am currently open to new opportunities</h4>
      <form id="contact__form" onsubmit = "contact(event)" >
+        <i class="fas fa-times modal__exit click" onclick="openMenu()"></i>
         <div class="form__item">
             <label class="form__item--label" >Name</label>
-            <input type="text" name="user_name" class="input"></input>
+            <input type="text" name="user_name" class="input" required></input>
         </div>
         <div class="form__item">
             <label class="form__item--label" >Email</label>
-            <input type="email" name="user_email" class="input" ></input>
+            <input type="email" name="user_email" class="input" required></input>
         </div>
         <div class="form__item">
             <label class="form__item--label" >Message</label>
-            <textarea type="text" name="message" class="input" ></textarea>
+            <textarea type="text" name="message" class="input" required></textarea>
         </div>
         <button  id="contact__submit" class="form__submit">Send it my way</button>
      </form>
@@ -122,7 +127,7 @@
         
         <h1 class="success__title">Thanks for the message bro!<br>
             Looking foward to speaking to you soon.</h1>
-            <i class="fas fa-times modal__exit click"></i>
+           
      </div>
      
    
@@ -130,15 +135,24 @@
 </div>
 </div>
 </div>
-</header>
-<button class="mail__btn click" onclick="openMenu()">
-    <i class="fas fa-envelope"></i>
-</button>
+<a href="#">
+    <button class="mail__btn click" onclick="openMenu()">
+        <i class="fas fa-envelope"></i>
+    </button>
+</a>
 <a href="#projects" class="scroll">
 <div class="scroll__icon click"></div>
 
         </a>
-
+        <img src="/assets/triangle.svg" class="shape shapes--0" >
+        <img src="/assets/circle.svg" class="shape shapes--1">
+        <img src="/assets/squiggly.svg" class="shape shapes--2">
+        <img src="/assets/circle.svg" class="shape shapes--3">
+        <img src="/assets/triangle.svg" class="shape shapes--4">
+        <img src="/assets/squiggly.svg" class="shape shapes--5">
+        <img src="/assets/circle.svg" class="shape shapes--6">
+        <img src="/assets/squiggly.svg" class="shape shapes--7">
+        <img src="/assets/triangle.svg" class="shape shapes--8">
     </section>
     <section id="projects">
         <div class="container">
@@ -162,13 +176,13 @@
                                 Html, CSS , JavaScript
                             </h4>
                             <p class="project__description--para">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolorum perferendis ipsa reprehenderit obcaecati minima optio dolore magnam numquam voluptatum veniam quis id, dolores sapiente sit eaque, officiis vero aspernatur.
+                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, possimus nihil. Voluptatem enim obcaecati neque blanditiis omnis iure recusandae at iusto eaque, inventore velit voluptate odit. Illo molestiae atque praesentium.
                             </p>
                             <div class="project__description--links">
-                                <a href="https://georgi838.github.io/TReact/" class="project__description--link" target="_blank">
+                                <a href="https://github.com/Georgi838" class="project__description--link" target="_blank">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="" class="project__description--link">
+                                <a href="https://georgi838.github.io/TReact/" class="project__description--link" target="_blank">
                                     <i class="fas fa-link"></i>
                                 </a>
                             </div>
@@ -178,7 +192,7 @@
                     <li class="project">
                         <div class="project__wrapper">
                             
-                            <img src="/assets/Eportfolio YT.png" class="project__img" alt="">
+                            <img src="assets/Eportfolio YT.png" class="project__img" alt="">
                             <div class="project__wrapper--bg"></div>
                         <div class="project__description">
                             <h3 class="project__description--title">
@@ -191,10 +205,10 @@
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolorum perferendis ipsa reprehenderit obcaecati minima optio dolore magnam numquam voluptatum veniam quis id, dolores sapiente sit eaque, officiis vero aspernatur.
                             </p>
                             <div class="project__description--links">
-                                <a href="https://georgi838.github.io/TReact/" class="project__description--link" target="_blank">
+                                <a href="https://github.com/Georgi838" class="project__description--link" target="_blank">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="" class="project__description--link">
+                                <a href="https://georgi838.github.io/TReact/" class="project__description--link" target="_blank">
                                     <i class="fas fa-link"></i>
                                 </a>
                             </div>
@@ -204,7 +218,7 @@
                     <li class="project">
                         <div class="project__wrapper">
                             
-                            <img src="/assets/google mockup.png" class="project__img" alt="">
+                            <img src="assets/google mockup.png" class="project__img" alt="">
                             <div class="project__wrapper--bg"></div>
                         <div class="project__description">
                             <h3 class="project__description--title">
@@ -217,10 +231,10 @@
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolorum perferendis ipsa reprehenderit obcaecati minima optio dolore magnam numquam voluptatum veniam quis id, dolores sapiente sit eaque, officiis vero aspernatur.
                             </p>
                             <div class="project__description--links">
-                                <a href="https://georgi838.github.io/TReact/" class="project__description--link" target="_blank">
+                                <a href="https://github.com/Georgi838" class="project__description--link" target="_blank">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="" class="project__description--link">
+                                <a href="https://georgi838.github.io/TReact/" class="project__description--link" target="_blank">
                                     <i class="fas fa-link"></i>
                                 </a>
                             </div>
@@ -237,27 +251,27 @@
 
                 <figure>
                     
-                <img src="/assets/logo.svg" class="footer__logo--img" alt="">
+                <img src="assets/logo.svg" class="footer__logo--img" alt="">
             </figure>
             <div class="footer__social--list">
+                <a href="https://github.com/Georgi838" class="footer__social--link 
+                link__hover-effect
+                link__hover-effect--white
+                " target="_blank">Github</a>
                 <a href="#" class="footer__social--link
                 link__hover-effect
                 link__hover-effect--white
-                ">Github</a>
+                cursor ">LinkedIn</a>
                 <a href="#" class="footer__social--link
                 link__hover-effect
                 link__hover-effect--white
-                ">LinkedIn</a>
-                <a href="#" class="footer__social--link
-                link__hover-effect
-                link__hover-effect--white
-                ">
+                " onclick="openMenu()">
                 Contact
             </a>
                 <a href="#" class="footer__social--link
                 link__hover-effect
                 link__hover-effect--white
-                ">Resume</a>
+                cursor ">Resume</a>
             </div>
             <div class="footer__copyright">
                 Copyright © 2022 Georgi Ivanov
