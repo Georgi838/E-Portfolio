@@ -15,7 +15,8 @@
  .bulgaria{
   padding:4px 14px;
   background:#242424;
-  border-radius:16px;
+  border-radius:24px;
+  box-shadow:  -1px 6px 8px  #242424;
  }
  .white{
   color:white;
@@ -100,6 +101,17 @@ nav,
  }
  .orange{
    color:#f06449;
+ }
+ .bolds{
+  font-weight:900;
+  font-size:28px;
+  text-shadow: -1px 6px 8px  #242424;
+ }
+
+ .bold{
+  font-weight:900;
+  font-size:22px;
+  text-shadow: -1px 6px 8px  #242424;
  }
  .title{
    font-size:100px;
