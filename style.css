@@ -11,6 +11,7 @@
  GENERIC CLASSES
  
  */
+
  .bulgaria{
   padding:4px 14px;
   background:#242424;
@@ -275,6 +276,9 @@ nav,
        100% {
          transform: translateY(-3px)
        }
+   }
+   .header__para{
+    font-size:27px;
    }
 /* 
 
