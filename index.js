@@ -41,7 +41,7 @@ function colorContrast(){
         document.body.classList.remove("dark-theme");
     }
 }
-const scaleFactor= 1/ 20;
+const scaleFactor= 1 / 20;
 function shapesFunction(event){
     const shapes = document.querySelectorAll(".shape");
     const x = event.clientX * scaleFactor;
