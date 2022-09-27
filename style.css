@@ -312,6 +312,7 @@ nav,
    visibility: hidden;
    z-index: -1;
    transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
+   
  }
  .modal--open .modal{
    z-index: 60;
@@ -333,6 +334,7 @@ nav,
  {
    /*goes back to normal position*/
    transform: translateX(0%);
+  
  }
  
  .modal__about {
